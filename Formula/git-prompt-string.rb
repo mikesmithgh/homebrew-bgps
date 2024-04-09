@@ -5,23 +5,23 @@
 class GitPromptString < Formula
   desc "A shell agnostic git prompt written in Go"
   homepage "https://github.com/mikesmithgh/git-prompt-string"
-  version "1.2.0"
+  version "1.2.1"
   license "Apache-2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.2.0/git-prompt-string_Darwin_x86_64.tar.gz"
-      sha256 "fbb81cae9aa8ba84a7a238d3d4f0235854cef20df3b79b2c32b5ae59dc06d162"
+      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.2.1/git-prompt-string_Darwin_x86_64.tar.gz"
+      sha256 "f4d2154c4d31fd7729c6e5ae417ed822b24f1283c985a260520a2c8510f11bbb"
 
       def install
         bin.install "git-prompt-string"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.2.0/git-prompt-string_Darwin_arm64.tar.gz"
-      sha256 "fec41ea89ee95a26a6ce3eed7ca215ea4fb117edab85880b41f4502824682655"
+      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.2.1/git-prompt-string_Darwin_arm64.tar.gz"
+      sha256 "1ef827b7eaa18878c0274e6b5eee37df9dcaeb368a478aec9fde8564aa74794e"
 
       def install
         bin.install "git-prompt-string"
@@ -30,17 +30,17 @@ class GitPromptString < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.2.0/git-prompt-string_Linux_arm64.tar.gz"
-      sha256 "51ff101c9f652b59743597c4a74c2048aca938df57e6d9b913650d76b6015c13"
+    if Hardware::CPU.intel?
+      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.2.1/git-prompt-string_Linux_x86_64.tar.gz"
+      sha256 "4d426522c32d86272f000300df356ca6c50f36ccb76924786a95bbdc20f1aaa0"
 
       def install
         bin.install "git-prompt-string"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.2.0/git-prompt-string_Linux_x86_64.tar.gz"
-      sha256 "53151d6beac67d627cc39126e6ae8916a8222aa96acc7d39e644ef182ce2c2c1"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.2.1/git-prompt-string_Linux_arm64.tar.gz"
+      sha256 "ed73c868f56aed6c9585a06cb31f9b864d8c8605b1cfbf78fb997b0a1a8018de"
 
       def install
         bin.install "git-prompt-string"
