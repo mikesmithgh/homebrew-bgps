@@ -5,23 +5,23 @@
 class GitPromptString < Formula
   desc "A shell agnostic git prompt written in Go"
   homepage "https://github.com/mikesmithgh/git-prompt-string"
-  version "1.2.1"
+  version "1.3.0"
   license "Apache-2.0"
 
   depends_on "git"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.2.1/git-prompt-string_Darwin_x86_64.tar.gz"
-      sha256 "f4d2154c4d31fd7729c6e5ae417ed822b24f1283c985a260520a2c8510f11bbb"
+      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.3.0/git-prompt-string_Darwin_x86_64.tar.gz"
+      sha256 "49aca6449de6e8e197eb598ee5ebf2b8dda994e81e678acc70fd48f8b27374c7"
 
       def install
         bin.install "git-prompt-string"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.2.1/git-prompt-string_Darwin_arm64.tar.gz"
-      sha256 "1ef827b7eaa18878c0274e6b5eee37df9dcaeb368a478aec9fde8564aa74794e"
+      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.3.0/git-prompt-string_Darwin_arm64.tar.gz"
+      sha256 "c3c345939c8a4ff3b1aae3600430dcffcddc952758e3e22a830103f97f5ee252"
 
       def install
         bin.install "git-prompt-string"
@@ -31,16 +31,16 @@ class GitPromptString < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.2.1/git-prompt-string_Linux_x86_64.tar.gz"
-      sha256 "4d426522c32d86272f000300df356ca6c50f36ccb76924786a95bbdc20f1aaa0"
+      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.3.0/git-prompt-string_Linux_x86_64.tar.gz"
+      sha256 "fba8bf14c83257c2aa640ac96ac05e12e6cadb83df395bba3fd05e2ac741d909"
 
       def install
         bin.install "git-prompt-string"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.2.1/git-prompt-string_Linux_arm64.tar.gz"
-      sha256 "ed73c868f56aed6c9585a06cb31f9b864d8c8605b1cfbf78fb997b0a1a8018de"
+      url "https://github.com/mikesmithgh/git-prompt-string/releases/download/v1.3.0/git-prompt-string_Linux_arm64.tar.gz"
+      sha256 "eba37c9a34dd424391f7cc01cc4f5feb4247dc3104e906d8725d402b8ad3fe04"
 
       def install
         bin.install "git-prompt-string"
